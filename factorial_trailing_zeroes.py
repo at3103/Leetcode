@@ -1,5 +1,12 @@
+"""
+Find the number of trailing zeroes in n!
+"""
 class Solution(object):
-    def trailingZeroes(self, n):
+    """
+    Class for the Solution
+    """
+    @classmethod
+    def trailingZeroes(cls, n):
         """
         :type n: int
         :rtype: int
@@ -10,11 +17,11 @@ class Solution(object):
         number_of_zeros = (n/10)
         #Number of trailing zeroes from number of 5's
         number_of_zeros += (n+5)/10
-        
+
         #Number of trailing zeroes from number of powers of 5's
-        n/=25
+        n /= 25
         while n:
             number_of_zeros += n
-            n/=5
+            n /= 5
         return number_of_zeros
         
