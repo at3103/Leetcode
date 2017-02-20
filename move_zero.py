@@ -1,4 +1,10 @@
+"""
+Move the zeroes to the end
+"""
 class Solution(object):
+    """
+    class for the solution
+    """
     def moveZeroes(self, nums):
         """
         :type nums: List[int]
@@ -6,13 +12,13 @@ class Solution(object):
         """
         length = len(nums)
         i = 0
-        ct = 0
+        count = 0
 
-        while ct <  length:
+        while count < length:
             if not nums[i]:
                 del nums[i]
                 nums.append(0)
             else:
                 i += 1
-            ct += 1
+            count += 1
             
