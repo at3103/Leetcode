@@ -1,0 +1,8 @@
+class Solution(object):
+    def isPowerOfFour(self, num):
+        """
+        :type num: int
+        :rtype: bool
+        """
+        bin_num = bin(num)
+        return bin_num.count('1') == 1 and num >=0 and not bin_num[2:].count('0')%2 
