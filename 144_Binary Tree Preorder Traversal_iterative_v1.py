@@ -28,30 +28,23 @@ class Solution:
         :type root: TreeNode
         :rtype: List[int]
         """
-        
+
         if not root:
             return []
-        
+
         stack = deque()
         res = list()
-        visited = set()
-        
+
         stack.append(root)
-        
+
         while stack:
             cur = stack.pop()
             
-            if cur in visited:
-                res.append(cur.val)
-                continue
-                
-            visited.add(cur)
-            
+            res.append(cur.val)
+
             if cur.right:
                 stack.append(cur.right)
             if cur.left:
                 stack.append(cur.left)
-            stack.append(cur)
-        
+
         return res
-        
